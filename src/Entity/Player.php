@@ -32,11 +32,6 @@ class Player
     private $lastname;
 
     /**
-     * @ORM\Column(type="date")
-     */
-    private $birth;
-
-    /**
      * @ORM\Column(type="integer")
      */
     private $age;
@@ -96,18 +91,6 @@ class Player
     public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    public function getBirth(): ?\DateTimeInterface
-    {
-        return $this->birth;
-    }
-
-    public function setBirth(\DateTimeInterface $birth): self
-    {
-        $this->birth = $birth;
 
         return $this;
     }
